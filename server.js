@@ -25,8 +25,9 @@ server.get('/',(req,res)=>{
     res.json({"API": "works"});
 });
 
+const PORT = process.env.PORT || 3000;
 
 //server listens
-server.listen('0.0.0.0', 10000,()=>{
-    console.log('Server is running on port 3000');
+server.listen(PORT, '0.0.0.0',()=>{
+    console.log('Server is running on port'+PORT);
 });
